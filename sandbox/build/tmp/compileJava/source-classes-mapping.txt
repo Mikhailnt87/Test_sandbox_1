@@ -1,2 +1,6 @@
-FirstProgramPackage/MyFirstProgram.java
- FirstProgramPackage.MyFirstProgram
+FP_Package/MyFirstProgram.java
+ FP_Package.MyFirstProgram
+FP_Package/Rectangle.java
+ FP_Package.Rectangle
+FP_Package/Square.java
+ FP_Package.Square
