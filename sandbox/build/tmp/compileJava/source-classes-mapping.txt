@@ -1,2 +1,2 @@
-MyFirstProgram.java
- MyFirstProgram
+FirstProgramPackage/MyFirstProgram.java
+ FirstProgramPackage.MyFirstProgram
