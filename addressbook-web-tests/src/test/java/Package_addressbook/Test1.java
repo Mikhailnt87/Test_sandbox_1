@@ -23,13 +23,14 @@ import org.openqa.selenium.Keys;
 import java.util.*;
 import java.net.MalformedURLException;
 import java.net.URL;
-public class Test1Test {
-  WebDriver driver;
+public class Test1 {
+  public WebDriver driver;
+
   @Before
   public void setUp() {
     WebDriverManager.firefoxdriver().setup();
     driver = new FirefoxDriver();
-  }
+     }
   @After
   public void tearDown() {
     driver.quit();
@@ -37,11 +38,21 @@ public class Test1Test {
   @Test
   public void test1() {
     driver.get("http://localhost/addressbook/");
-    driver.manage().window().setSize(new Dimension(1127, 699));
+    driver.manage().window().setSize(new Dimension(1127, 701));
     driver.findElement(By.name("user")).sendKeys("admin");
     driver.findElement(By.id("LoginForm")).click();
     driver.findElement(By.name("pass")).click();
     driver.findElement(By.name("pass")).sendKeys("secret");
     driver.findElement(By.cssSelector("input:nth-child(7)")).click();
+    driver.findElement(By.linkText("groups")).click();
+    driver.findElement(By.name("new")).click();
+    driver.findElement(By.name("group_name")).click();
+    driver.findElement(By.name("group_name")).sendKeys("tt1");
+    driver.findElement(By.name("group_header")).click();
+    driver.findElement(By.name("group_header")).sendKeys("tt2");
+    driver.findElement(By.name("group_footer")).click();
+    driver.findElement(By.name("group_footer")).sendKeys("tt3");
+    driver.findElement(By.name("submit")).click();
+    driver.findElement(By.linkText("group page")).click();
   }
 }
