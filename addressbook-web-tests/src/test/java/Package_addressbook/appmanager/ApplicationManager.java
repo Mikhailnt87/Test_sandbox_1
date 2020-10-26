@@ -21,7 +21,8 @@ public class ApplicationManager {
 
     private void login(String username, String password) {
         driver.get("http://localhost/addressbook/");
-        driver.manage().window().setSize(new Dimension(1127, 701));
+        //driver.manage().window().setSize(new Dimension(1127, 701));
+        driver.manage().window().maximize();
         driver.findElement(By.name("user")).sendKeys(username);
         driver.findElement(By.id("LoginForm")).click();
         driver.findElement(By.name("pass")).click();
